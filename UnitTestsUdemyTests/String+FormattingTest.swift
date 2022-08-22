@@ -9,5 +9,15 @@ import XCTest
 @testable import UnitTestsUdemy
 
 class String_FormattingTest: XCTestCase {
+    func testIsBigText() {
+        isBigText(for: "O meu nome é Henrique", expectedResult: true, message: "O texto deve ter mais de 5 palavras para ser considerado grande")
+        isBigText(for: "Olá", expectedResult: false, message: "O texto deve ter pelo menos um palavra e menos de 5 palavras")
+        isBigText(for: "", expectedResult: nil, message: "O texto precisa ser vazio")
+    }
     
+    func isBigText(for text: String,
+                   expectedResult: Bool?,
+                   message: String = "A função não aconteceu rodou da forma esperada") {
+        XCTAssert(text.isBigText() == expectedResult, message)
+    }
 }
