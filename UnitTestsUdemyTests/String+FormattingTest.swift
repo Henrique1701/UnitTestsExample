@@ -14,7 +14,9 @@ class String_FormattingTest: XCTestCase {
         isBigText(for: "Olá", expectedResult: false, message: "O texto deve ter pelo menos um palavra e menos de 5 palavras")
         isBigText(for: "", expectedResult: nil, message: "O texto precisa ser vazio")
     }
-    
+}
+
+extension String_FormattingTest {
     func isBigText(for text: String,
                    expectedResult: Bool?,
                    message: String = "A função não aconteceu rodou da forma esperada") {
