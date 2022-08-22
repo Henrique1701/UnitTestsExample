@@ -9,6 +9,13 @@ import XCTest
 @testable import UnitTestsUdemy
 
 class String_FormattingTest: XCTestCase {
+    func testRemoveWhitespaces() {
+        let textWithWhitespaces = "Texto com espaços"
+        let textWithoutWhitespaces = "Textocomespaços"
+        
+        XCTAssertEqual(textWithWhitespaces.removeWhitespace(), textWithoutWhitespaces)
+    }
+    
     func testIsValidEmailAddress() {
         let validEmail = "user@gmail.com"
         let notValidEmail = "user"

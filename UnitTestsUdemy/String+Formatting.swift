@@ -8,7 +8,7 @@
 import Foundation
 
 extension String {
-    func removewhitespace() -> String {
+    func removeWhitespace() -> String {
         return self.replace(string: " ", replacement: "")
     }
     
